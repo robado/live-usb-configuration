@@ -1,4 +1,4 @@
-file_roots:
-  base:
-    '*':
-      - apps
+base:
+  '*':
+    - apps
+    - helloworld
