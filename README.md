@@ -11,12 +11,13 @@ I wanted to install **vim** texteditor, **shutter** for taking screenshots and t
 pictures of certain areas and **atom** for coding.
 
 	$ cat init.sls 
-apps:
-  pkg.installed:
-    - pkgs:
-      - vim
-      - shutter
-      - retext
-      - git
+	apps:
+  	  pkg.installed:
+    	    - pkgs:
+	      - vim
+      	      - shutter
+      	      - retext
+      	      - git
+
 
 
