@@ -33,6 +33,7 @@ Then I had to modifie my **top.sls** file for when I run the file it will instal
 
 
 And now when I run run it with:
+
 	sudo salt 'ubuntu' state.highstate
 	ubuntu:
 	----------
@@ -107,6 +108,7 @@ sudo apt-get update && sudo apt-get upgrade
 And because on live-ubuntu (don't know how on other distros) you have to active 
 **Community-maintained free and open-source software (univer)** to download 
 any app so I added that before the updates:
+
 	#!/bin/bash
 sudo add-apt-repository universe
 sudo apt-get update && sudo apt-get upgrade
