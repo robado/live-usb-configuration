@@ -43,7 +43,7 @@ And now when I run run it with:
      Started: 17:38:53.095868
     Duration: 802.005 ms
      Changes:   
-----------
+	----------
           ID: apps
     Function: pkg.installed
       Result: True
@@ -83,10 +83,10 @@ And now when I run run it with:
                       2:8.0.1453-1ubuntu1
                   old:
 
-Summary for ubuntu
-------------
-Succeeded: 2 (changed=1)
-Failed:    0
-------------
-Total states run:     2
+	Summary for ubuntu
+	------------
+	Succeeded: 2 (changed=1)
+	Failed:    0
+	------------
+	Total states run:     2
 
