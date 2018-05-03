@@ -15,11 +15,11 @@ I started by making a file on what programs I wanted module to install:
 	$ cat init.sls 
 	apps:
   	  pkg.installed:
-    	- pkgs:
+	    - pkgs:
 	      - vim
-      	  - shutter
-      	  - retext
-      	  - git
+	      - shutter
+	      - retext
+	      - git
 
 
 
