@@ -116,7 +116,9 @@ any app so I added that before the updates:
 
 I wanted to somehow automatically open 2 terminals and I had no idea on how to
 do it. I didn't know how it was suppose to be done or how so I started to 
-test stuff but I was thinking it can be done with **shell scripting**
+test stuff but I was thinking it can be done with **shell scripting**. [Help I found on 
+StackExchange forums](https://superuser.com/questions/226167/open-terminal-on-start-in-a-specific-place-and-size)
+
 
 After a while I found that 
 
