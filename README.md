@@ -10,14 +10,25 @@ I created needed folders for this to work **srv/salt/** and necessary files and 
 I wanted to install **vim** texteditor, **shutter** for taking screenshots and taking screen 
 pictures of certain areas and **atom** for coding.
 
+I started by making a file on what programs I wanted module to install:
+
 	$ cat init.sls 
 	apps:
   	  pkg.installed:
-    	    - pkgs:
+    	- pkgs:
 	      - vim
-      	      - shutter
-      	      - retext
-      	      - git
+      	  - shutter
+      	  - retext
+      	  - git
 
+
+
+Then I had to modifie my **top.sls** file for when I run the file it will install them.
+
+    $ cat top.sls 
+    base:
+      '*':
+        - helloworld
+        - apps
 
 
