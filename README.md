@@ -35,7 +35,7 @@ Then I had to modifie my **top.sls** file for when I run the file it will instal
 And now when I run run it with:
 	sudo salt 'ubuntu' state.highstate
 	ubuntu:
-----------
+	----------
           ID: /tmp/helloworld.txt
     Function: file.managed
       Result: True
@@ -89,4 +89,26 @@ And now when I run run it with:
 	Failed:    0
 	------------
 	Total states run:     2
+
+The helloworld was just for testing and I forgot to remove it, but then again it never hurts to 
+know that everything works!
+
+So now I have made it to download the files I wanted. But this isn't all what I wanted my module
+to do. When running this module I want it to update and upgrade and clone my repository from
+github and that is done with **bash** scripts.
+
+I started creating a file where I'm going to gather all the script commands.
+I started doing everything step-by-step. So firstly I added **update** and
+**upgrade** commands:
+	$ cat start.sh 
+#!/bin/bash
+sudo apt-get update && sudo apt-get upgrade
+
+And because on live-ubuntu (don't know how on other distros) you have to active 
+**Community-maintained free and open-source software (univer)** to download 
+any app so I added that before the updates:
+	#!/bin/bash
+sudo add-apt-repository universe
+sudo apt-get update && sudo apt-get upgrade
+
 
