@@ -32,3 +32,61 @@ Then I had to modifie my **top.sls** file for when I run the file it will instal
         - apps
 
 
+And now when I run run it with:
+	sudo salt 'ubuntu' state.highstate
+	ubuntu:
+----------
+          ID: /tmp/helloworld.txt
+    Function: file.managed
+      Result: True
+     Comment: File /tmp/helloworld.txt is in the correct state
+     Started: 17:38:53.095868
+    Duration: 802.005 ms
+     Changes:   
+----------
+          ID: apps
+    Function: pkg.installed
+      Result: True
+     Comment: 4 targeted packages were installed/updated.
+     Started: 17:38:55.795794
+    Duration: 7849.789 ms
+     Changes:   
+              ----------
+              git:
+                  ----------
+                  new:
+                      1:2.17.0-1ubuntu1
+                  old:
+              git-completion:
+                  ----------
+                  new:
+                      1
+                  old:
+              git-core:
+                  ----------
+                  new:
+                      1
+                  old:
+              retext:
+                  ----------
+                  new:
+                      7.0.1-1
+                  old:
+              shutter:
+                  ----------
+                  new:
+                      0.94-1
+                  old:
+              vim:
+                  ----------
+                  new:
+                      2:8.0.1453-1ubuntu1
+                  old:
+
+Summary for ubuntu
+------------
+Succeeded: 2 (changed=1)
+Failed:    0
+------------
+Total states run:     2
+
