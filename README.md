@@ -110,7 +110,35 @@ And because on live-ubuntu (don't know how on other distros) you have to active
 any app so I added that before the updates:
 
 	#!/bin/bash
-sudo add-apt-repository universe
-sudo apt-get update && sudo apt-get upgrade
+	sudo add-apt-repository universe
+	sudo apt-get update && sudo apt-get upgrade
 
 
+I wanted to somehow automatically open 2 terminals and I had no idea on how to
+do it. I didn't know how it was suppose to be done or how so I started to 
+test stuff but I was thinking it can be done with **shell scripting**
+
+After a while I found that 
+
+	#!/bin/bash
+	gnome-terminal 
+
+Will open a new terminal!
+So now I just had to make it as what I want it to look like.
+After a while I found how to modify the size of a new terminal:
+
+	#!/bin/bash
+	gnome-terminal --geometry=150x50
+
+
+Now I had to do so that they will place correctly! 
+After a while I found out how I could start terminals in a specific way. So I added the four terminal
+window I wanted. There is probably better ways on doing this but this is the way I found on how to do.
+
+	#!/bin/bash
+	gnome-terminal --geometry=101x26+0
+	gnome-terminal --geometry=101x26+0-0
+	gnome-terminal --geometry=101X26+1500
+	gnome-terminal --geometry=101X26+1500-0
+
+This is my script to open 4 terminals as I want them to open

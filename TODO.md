@@ -7,4 +7,8 @@ For enabling multiver for downloading programs:
 
     sudo add-apt-repository universe
 
+Commands for gnome terminal
+
+	gnome-geomatry --help-all
+
 
