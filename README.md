@@ -176,4 +176,39 @@ I also had to remove git from salt to install it because my script is already in
 	    - retext
 
 
+So I also wanted to install **gtop** program for monitoring system. I had so many problems that I even forgot to report what I was doing but basically my most main problem was to write the right **ini.sls** that would install **npm**, ** nodejs** and then **gtop**. 
+
+Firstly I needed to find out how to install npm programs. [Information for npm programs installation I got from Saltstack doumentation](https://docs.saltstack.com/en/latest/ref/states/all/salt.states.npm.html). Then I had to figure out how to install gtop after npm and nodejs was installed. This I found out with **A LOT OF TRIAL AND ERRORS**. But finally after many tries I figured it out. So I figured out and then also because ubuntu 18.04 and ubuntu 16.04 require different names for nodejs so I had to make and **if-statement**. 
+
+So after all tries, this is what my code looks for installing gtop:
+
+    npm:
+      pkg.installed
+
+    nodejs:
+      pkg.installed:
+       {% if grains['osrelease'] == '18.04' %}
+       - name: nodejs
+       {% elif grains['osrelease'] == '16.04' %}
+       - name: nodejs-legacy
+       {% endif %}
+
+    gtop:
+      npm.installed:
+        - require:
+          - pkg: npm
+
+
+This installs gtop. Had to update my **top.sls** file too to include gtop:
+
+    base:
+      '*':
+       - apps
+       - helloworld
+       - gtop
+
+
+So now with all the other programs, my salt module installs gtop.
+
+
 
