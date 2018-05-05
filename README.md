@@ -210,5 +210,20 @@ This installs gtop. Had to update my **top.sls** file too to include gtop:
 
 So now with all the other programs, my salt module installs gtop.
 
+Then I also modified the **terminal.sh** script to open gtop in one of the terminal.
 
+    #!/bin/bash
+    gnome-terminal --geometry=101x26+0
+    gnome-terminal --geometry=101x26+0-0
+    gnome-terminal --geometry=101X26+1500
+    gnome-terminal --geometry=101X26+1500-0 -e gtop
+
+I just added **-e gtop** and that opens the gtop program.
+
+
+## Usage
+You need to only use two commands:
+
+     wget https://raw.github.com/robado/live-usb-configuration/master/start.sh
+     bash start.sh
 
