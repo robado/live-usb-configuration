@@ -12,7 +12,7 @@ cd live-usb-configuration
 echo -e "\e[38;5;82mInstalling git repo modules\e[38m"
 ./highstate.sh
 echo -e "\e[38;5;82mOpening terminals and gtop in one of them\e[38m"
-./terminal.sh %% cd 
+./terminal.sh && cd 
 
 echo -e "Exiting......"
 exit
