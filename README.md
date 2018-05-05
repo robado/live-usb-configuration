@@ -143,4 +143,25 @@ window I wanted. There is probably better ways on doing this but this is the way
 	gnome-terminal --geometry=101X26+1500
 	gnome-terminal --geometry=101X26+1500-0
 
-This is my script to open 4 terminals as I want them to open
+This is my script to open 4 terminals as I want them to open.
+
+First when I tried this bash on a fresh live-usb (which had Ubuntu 18.04 LTS) it didn't work and I knew why it didn't because I errors said it clearly. So I fixed it and I also borrowed a few commands from [my teachers github repository](https://github.com/terokarvinen/sirotin).
+
+After fixes my bash script worked! It enables universe so any program can be downloaded, it updates and upgrades, it installs git and salt-master, clones the github repo, opens four terminals, runs the salt command to install the programs and exit that terminal which was opened to run this script.
+
+This is how the code looks finallized:
+
+    #!/bin/bash
+sudo add-apt-repository universe
+sudo apt-get update && sudo apt-get upgrade
+
+sudo apt-get -y install git salt-master
+git clone https://github.com/robado/live-usb-configuration
+cd live-usb-configuration
+
+./terminal.sh %% cd 
+./highstaterun.sh
+
+exit
+
+
