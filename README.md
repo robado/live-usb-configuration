@@ -222,6 +222,30 @@ I just added **-e gtop** and that opens the gtop program.
 
 Now I had to collect everything so you don't have to do but enter 3 commands and all will be installed.
 
+This is what my **start.sh** looks like now when it works!
+
+	#!/bin/bash
+	echo -e "\e[38;5mEnabling universe, updating and upgrading.....\e[38;5m"
+	sudo add-apt-repository universe
+	sudo apt-get -y update && sudo apt-get -y upgrade
+
+	echo -e "\e[38;5mInstalling git and salt-master\e[38;5m"
+	sudo apt-get -y install git salt-master
+	echo -e "\e[38;5;82mCloning git repo\e[38m"
+	git clone https://github.com/robado/live-usb-configuration
+	cd live-usb-configuration/
+
+	echo -e "\e[38;5mInstalling git repo modules\e[38;5m"
+	./highstaterun.sh
+	echo -e "\e[38;5mOpening terminals and gtop in one of them\e[38;5m"
+	./terminal.sh
+
+	echo -e "Exiting......"
+	exit
+	
+Other files what you want to look closer, they can be found right here in my repository!
+
+And finally:
 
 ## Usage
 You need to only use two commands:
@@ -229,4 +253,5 @@ You need to only use two commands:
      wget https://raw.github.com/robado/live-usb-configuration/master/start.sh
      bash start.sh
      
+There is one space after **bash start.sh** so it will run it.
 
