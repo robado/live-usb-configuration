@@ -165,3 +165,15 @@ This is how the code looks finallized:
     exit
 
 
+I also had to remove git from salt to install it because my script is already installing to clone the repository. 
+
+
+	apps:
+  pkg.installed:
+    - pkgs:
+      - vim
+      - shutter
+      - retext
+
+
+

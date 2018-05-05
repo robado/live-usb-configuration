@@ -4,4 +4,3 @@ apps:
       - vim
       - shutter
       - retext
-      - git
