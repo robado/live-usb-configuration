@@ -245,6 +245,12 @@ This is what my **start.sh** looks like now when it works!
 	
 Other files what you want to look closer, they can be found right here in my repository!
 
+When I finished my module, I also had to test it! So I booted a fresh new live-ubuntu 18.04 and ran the command:
+
+	wget https://raw.github.com/robado/live-usb-configuration/master/start.sh
+	bash start.sh
+	 
+
 And finally:
 
 ## Usage
@@ -252,6 +258,7 @@ You need to only use two commands:
 
      wget https://raw.github.com/robado/live-usb-configuration/master/start.sh
      bash start.sh
+      
      
 There is one space after **bash start.sh** so it will run it.
 
