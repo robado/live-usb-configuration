@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "\e[38;5;82mEnabling universe, updating and upgrading.....\e[38;5;82m"
 sudo add-apt-repository universe
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get -y update && sudo -y apt-get upgrade
 
 echo -e "\e[38;5;82mInstalling git and salt-master\e[38m"
 sudo apt-get -y install git salt-master
