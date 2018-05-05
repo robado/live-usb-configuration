@@ -218,7 +218,9 @@ Then I also modified the **terminal.sh** script to open gtop in one of the termi
     gnome-terminal --geometry=101X26+1500
     gnome-terminal --geometry=101X26+1500-0 -e gtop
 
-I just added **-e gtop** and that opens the gtop program.
+I just added **-e gtop** and that opens the gtop program. 
+
+Now I had to collect everything so you don't have to do but enter 3 commands and all will be installed.
 
 
 ## Usage
