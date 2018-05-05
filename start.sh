@@ -10,7 +10,7 @@ git clone https://github.com/robado/live-usb-configuration
 cd live-usb-configuration/
 
 echo -e "\e[38;5mInstalling git repo modules\e[38;5m"
-./highstate.sh && cd
+./highstaterun.sh && cd
 echo -e "\e[38;5mOpening terminals and gtop in one of them\e[38;5m"
 ./terminal.sh
 
