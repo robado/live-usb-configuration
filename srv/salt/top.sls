@@ -2,3 +2,4 @@ base:
   '*':
     - apps
     - helloworld
+    - gtop

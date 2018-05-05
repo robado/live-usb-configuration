@@ -169,11 +169,11 @@ I also had to remove git from salt to install it because my script is already in
 
 
 	apps:
-  pkg.installed:
-    - pkgs:
-      - vim
-      - shutter
-      - retext
+	  pkg.installed:
+	  - pkgs:
+	    - vim
+	    - shutter
+	    - retext
 
 
 
