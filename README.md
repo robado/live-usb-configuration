@@ -152,16 +152,16 @@ After fixes my bash script worked! It enables universe so any program can be dow
 This is how the code looks finallized:
 
     #!/bin/bash
-sudo add-apt-repository universe
-sudo apt-get update && sudo apt-get upgrade
+    sudo add-apt-repository universe
+    sudo apt-get update && sudo apt-get upgrade
 
-sudo apt-get -y install git salt-master
-git clone https://github.com/robado/live-usb-configuration
-cd live-usb-configuration
+    sudo apt-get -y install git salt-master
+    git clone https://github.com/robado/live-usb-configuration
+    cd live-usb-configuration
 
-./terminal.sh %% cd 
-./highstaterun.sh
+    ./terminal.sh %% cd 
+    ./highstaterun.sh
 
-exit
+    exit
 
 
