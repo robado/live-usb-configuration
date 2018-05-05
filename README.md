@@ -250,9 +250,11 @@ When I finished my module, I also had to test it! So I booted a fresh new live-u
 	wget https://raw.github.com/robado/live-usb-configuration/master/start.sh
 	bash start.sh
 	 
+It installed everything and did what I wanted! But i forgot to take a screenshot of that.... I will do that at some point!!
+
 
 And finally:
-
+__
 ## Usage
 You need to only use two commands:
 
