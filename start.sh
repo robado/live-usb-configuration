@@ -1,6 +1,7 @@
 #!/bin/bash
 echo -e "\e[38;5mEnabling universe, updating and upgrading.....\e[38;5m"
 sudo add-apt-repository universe
+sudo apt-get -y install ubuntu-restricted-extras
 sudo apt-get -y update && sudo apt-get -y upgrade
 
 echo -e "\e[38;5mInstalling git and salt-master\e[38;5m"
